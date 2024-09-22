@@ -32,7 +32,7 @@ jobs:
 
 
   phptats:
-    name: PHPStat
+    name: PHP-CS-FIXER2 
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -44,4 +44,4 @@ jobs:
         run: composer install --ignore-platform-req=*
 
       - name: Run PHPStat
-        run: php run.php
+        run: php vendor/phpcodestyle/fixers/bin/console
